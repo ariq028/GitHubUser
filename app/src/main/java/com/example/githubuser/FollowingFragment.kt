@@ -1,6 +1,5 @@
 package com.example.githubuser
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -21,9 +20,9 @@ class FollowingFragment : Fragment() {
         val position = arguments?.getInt(ARG_POSITION, 0)
         val username = arguments?.getString(ARG_USERNAME)
         if (position == 1) {
-
+            binding.testUsername.text = "Get Following $username"
         } else {
-
+            binding.testUsername.text = "Get Follower $username"
         }
     }
 
