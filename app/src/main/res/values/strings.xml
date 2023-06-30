@@ -10,4 +10,6 @@
     <string name="followers">Followers %1$d</string>
     <string name="tab_text_1">Following</string>
     <string name="tab_text_2">Followers</string>
+    <string name="favorite">Favorite</string>
+    <string name="dark_mode">Dark Mode</string>
 </resources>

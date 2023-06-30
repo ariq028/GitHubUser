@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
 }
 
 android {
@@ -15,6 +17,7 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField("String", "KEY", '"token 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"')
     }
 
     buildTypes {
@@ -30,7 +33,7 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    buildFeatures{
+    buildFeatures {
         viewBinding true
     }
 }
@@ -53,4 +56,14 @@ dependencies {
     implementation 'com.loopj.android:android-async-http:1.4.9'
     implementation 'de.hdodenhof:circleimageview:3.1.0'
     implementation "androidx.viewpager2:viewpager2:1.0.0"
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'androidx.cardview:cardview:1.0.0'
+
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.1'
+    implementation 'androidx.room:room-runtime:2.5.1'
+    kapt 'androidx.room:room-compiler:2.5.1'
+    implementation("androidx.room:room-ktx:2.5.1")
+
+    implementation "androidx.datastore:datastore-preferences:1.0.0"
 }
